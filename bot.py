@@ -101,7 +101,7 @@ def run_alerts() -> None:
 
         already_alerted = state["alerted"].get(ticker, False)
         if abs(pct_change) >= threshold and not already_alerted:
-            direction = "\U0001F53A" if pct_change > 0 else "\U0001F53B"
+            direction = "\U0001F7E2" if pct_change > 0 else "\U0001F534"
             text = (
                 f"{direction} *{name}* ({ticker})\n"
                 f"Kurs: {current:.2f}\n"
@@ -121,7 +121,7 @@ def run_alerts() -> None:
 
 def run_gold_update() -> None:
     current, prev_close, pct_change = get_price_change(GOLD_TICKER)
-    direction = "\U0001F53A" if pct_change >= 0 else "\U0001F53B"
+    direction = "\U0001F7E2" if pct_change >= 0 else "\U0001F534"
     text = (
         f"\U0001F947 *Gold Tagesupdate*\n"
         f"Kurs: {current:.2f} USD\n"
