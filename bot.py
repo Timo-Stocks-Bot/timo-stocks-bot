@@ -25,6 +25,7 @@ FX_TICKER = "EURUSD=X"  # fuer USD -> EUR Umrechnung der Anzeige
 # currency: "USD" (wird fuer die Anzeige nach EUR umgerechnet), "EUR" (bereits Euro),
 #           "INDEX" (Indexpunkte, keine Waehrung/Umrechnung)
 WATCHLIST = [
+    {"name": "Gold", "ticker": GOLD_TICKER, "threshold": 5.0, "currency": "USD"},
     {"name": "Bitcoin", "ticker": "BTC-USD", "threshold": 6.0, "currency": "USD"},
     {"name": "Solana", "ticker": "SOL-USD", "threshold": 8.0, "currency": "USD"},
     {"name": "NVIDIA", "ticker": "NVDA", "threshold": 5.0, "currency": "USD"},
