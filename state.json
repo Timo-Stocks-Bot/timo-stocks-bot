@@ -1,6 +1,7 @@
 {
   "date": "2026-07-06",
   "alerted": {
-    "COHR": true
+    "COHR": true,
+    "TSLA": true
   }
 }
