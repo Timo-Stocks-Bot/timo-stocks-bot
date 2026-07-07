@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""News-/Politik-Trigger: sammelt Marktnews per RSS, filtert per Gemini-LLM, sendet gebuendelt."""
+"""News-/Politik-Trigger: sammelt Marktnews per RSS, filtert per Groq-LLM, sendet gebuendelt."""
 import json
 import os
 import sys
@@ -13,10 +13,10 @@ STATE_FILE = Path(__file__).parent / "news_state.json"
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
-GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
-GEMINI_MODEL = "gemini-2.0-flash"
-GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # Kategorie -> Google-News-RSS-Suchanfrage. Bei Bedarf anpassen/erweitern.
 NEWS_CATEGORIES = {
@@ -85,11 +85,11 @@ def mark_as_seen(by_category: dict) -> None:
     save_state(state)
 
 
-def ask_gemini_for_relevance(by_category: dict) -> str:
-    """Schickt die Headlines an Gemini, laesst nur marktrelevante zusammenfassen.
+def ask_llm_for_relevance(by_category: dict) -> str:
+    """Schickt die Headlines an Groq (Llama), laesst nur marktrelevante zusammenfassen.
     Gibt fertigen Telegram-Text zurueck, oder einen leeren String, wenn nichts relevant ist."""
-    if not GOOGLE_API_KEY:
-        raise RuntimeError("GOOGLE_API_KEY fehlt (als Umgebungsvariable/Secret setzen).")
+    if not GROQ_API_KEY:
+        raise RuntimeError("GROQ_API_KEY fehlt (als Umgebungsvariable/Secret setzen).")
 
     lines = []
     for category, items in by_category.items():
@@ -112,14 +112,19 @@ def ask_gemini_for_relevance(by_category: dict) -> str:
     )
 
     resp = requests.post(
-        f"{GEMINI_URL}?key={GOOGLE_API_KEY}",
-        json={"contents": [{"parts": [{"text": prompt}]}]},
+        GROQ_URL,
+        headers={"Authorization": f"Bearer {GROQ_API_KEY}"},
+        json={
+            "model": GROQ_MODEL,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.2,
+        },
         timeout=30,
     )
     if not resp.ok:
-        raise RuntimeError(f"Gemini API {resp.status_code}: {resp.text[:500]}")
+        raise RuntimeError(f"Groq API {resp.status_code}: {resp.text[:500]}")
     data = resp.json()
-    text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+    text = data["choices"][0]["message"]["content"].strip()
     if "KEINE_RELEVANTEN_NEWS" in text:
         return ""
     return text
@@ -144,12 +149,12 @@ def main() -> None:
         return
 
     try:
-        summary = ask_gemini_for_relevance(by_category)
+        summary = ask_llm_for_relevance(by_category)
     except Exception as exc:
-        print(f"[WARN] Gemini-Relevanz-Check fehlgeschlagen, versuche es beim naechsten Lauf erneut: {exc}", file=sys.stderr)
+        print(f"[WARN] Groq-Relevanz-Check fehlgeschlagen, versuche es beim naechsten Lauf erneut: {exc}", file=sys.stderr)
         return
 
-    # Erst jetzt, nach erfolgreichem Gemini-Check, als 'gesehen' markieren.
+    # Erst jetzt, nach erfolgreichem Relevanz-Check, als 'gesehen' markieren.
     mark_as_seen(by_category)
 
     if not summary:

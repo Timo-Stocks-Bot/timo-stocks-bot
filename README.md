@@ -5,8 +5,12 @@ von Schwellenwerten (siehe `WATCHLIST` in `bot.py`) eine Nachricht schickt. Gold
 zusaetzlich ein taegliches Fixzeit-Update.
 
 Zusaetzlich sammelt `news_check.py` markrelevante News (Zinsentscheidungen, Regulierung,
-grosse Tech/KI-News) per RSS + Gemini-Relevanz-Check und schickt gebuendelt eine
-Zusammenfassung, falls etwas relevant ist (sonst bleibt es still).
+grosse Tech/KI-News) per RSS + Groq-Relevanz-Check (Llama-Modell) und schickt gebuendelt
+eine Zusammenfassung, falls etwas relevant ist (sonst bleibt es still).
+
+Hinweis: urspruenglich war hierfuer Google Gemini vorgesehen, dessen Free-Tier ist aber in
+der EU/EWR nicht verfuegbar (Quota 0). Deshalb wird stattdessen Groq genutzt (echter
+kostenloser Tier, kein EU-Ausschluss bekannt).
 
 ## Wichtig: Automatisierung laeuft ueber cron-job.org, nicht ueber GitHubs eigenen Zeitplan
 
@@ -33,7 +37,7 @@ aktiv sind und ob der letzte Lauf erfolgreich war (Token evtl. abgelaufen/widerr
 
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
-- `GOOGLE_API_KEY` (Gemini API Key von aistudio.google.com, kostenloser Free-Tier, fuer `news_check.py`)
+- `GROQ_API_KEY` (Groq API Key von console.groq.com, kostenloser Free-Tier, fuer `news_check.py`)
 
 ## Lokale Anpassung
 
