@@ -139,6 +139,15 @@ def send_telegram(text: str) -> None:
         data={"chat_id": TELEGRAM_CHAT_ID, "text": text, "parse_mode": "Markdown"},
         timeout=15,
     )
+    if resp.status_code == 400:
+        # Von der KI generierter Text kann ungueltige/unausgeglichene Markdown-Zeichen
+        # enthalten - dann als Klartext nachsenden statt die Nachricht ganz zu verlieren.
+        print("[WARN] Markdown-Versand fehlgeschlagen, sende als Klartext nach.", file=sys.stderr)
+        resp = requests.post(
+            url,
+            data={"chat_id": TELEGRAM_CHAT_ID, "text": text},
+            timeout=15,
+        )
     resp.raise_for_status()
 
 
@@ -154,15 +163,21 @@ def main() -> None:
         print(f"[WARN] Groq-Relevanz-Check fehlgeschlagen, versuche es beim naechsten Lauf erneut: {exc}", file=sys.stderr)
         return
 
-    # Erst jetzt, nach erfolgreichem Relevanz-Check, als 'gesehen' markieren.
-    mark_as_seen(by_category)
-
     if not summary:
+        # Erfolgreich geprueft, nur nichts Relevantes dabei - jetzt als 'gesehen' markieren.
+        mark_as_seen(by_category)
         print("[NEWS] Nichts davon als marktrelevant eingestuft.")
         return
 
     text = f"\U0001F4F0 *Markt-News Update*\n\n{summary}"
-    send_telegram(text)
+    try:
+        send_telegram(text)
+    except Exception as exc:
+        print(f"[WARN] Telegram-Versand fehlgeschlagen, versuche es beim naechsten Lauf erneut: {exc}", file=sys.stderr)
+        return
+
+    # Erst nach erfolgreichem Versand als 'gesehen' markieren.
+    mark_as_seen(by_category)
     print("[NEWS] Update gesendet.")
 
 
