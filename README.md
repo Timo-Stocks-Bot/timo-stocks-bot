@@ -4,6 +4,10 @@ Telegram-Bot, der ueber `bot.py` Kurs-/Marktbewegungen prueft und bei Ueberschre
 von Schwellenwerten (siehe `WATCHLIST` in `bot.py`) eine Nachricht schickt. Gold bekommt
 zusaetzlich ein taegliches Fixzeit-Update.
 
+Zusaetzlich sammelt `news_check.py` markrelevante News (Zinsentscheidungen, Regulierung,
+grosse Tech/KI-News) per RSS + Gemini-Relevanz-Check und schickt gebuendelt eine
+Zusammenfassung, falls etwas relevant ist (sonst bleibt es still).
+
 ## Wichtig: Automatisierung laeuft ueber cron-job.org, nicht ueber GitHubs eigenen Zeitplan
 
 GitHubs eingebauter `schedule:`-Trigger in den Workflows (`.github/workflows/*.yml`) hat sich
@@ -15,6 +19,8 @@ stattdessen ueber einen externen, kostenlosen Cron-Dienst ausgeloest:
   `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/gold.yml/dispatches`
 - **Cronjob "Market Alerts Trigger"**: alle 15-20 Min., ruft
   `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/alerts.yml/dispatches`
+- **Cronjob "Market News Trigger"**: 2x taeglich (morgens + abends), ruft
+  `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/news.yml/dispatches`
 
 Beide Cronjobs senden dabei einen GitHub **Fine-grained Personal Access Token**
 (Scope: nur dieses Repo, Permission "Actions: Read and write") als
@@ -27,7 +33,9 @@ aktiv sind und ob der letzte Lauf erfolgreich war (Token evtl. abgelaufen/widerr
 
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
+- `GOOGLE_API_KEY` (Gemini API Key von aistudio.google.com, kostenloser Free-Tier, fuer `news_check.py`)
 
 ## Lokale Anpassung
 
-Watchlist/Schwellenwerte direkt in `bot.py` (`WATCHLIST`-Liste) aendern, committen, pushen.
+- Watchlist/Schwellenwerte: `WATCHLIST`-Liste in `bot.py` aendern, committen, pushen.
+- News-Kategorien/Suchbegriffe: `NEWS_CATEGORIES`-Dict in `news_check.py` aendern.
