@@ -23,7 +23,7 @@ stattdessen ueber einen externen, kostenlosen Cron-Dienst ausgeloest:
   `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/gold.yml/dispatches`
 - **Cronjob "Market Alerts Trigger"**: alle 15-20 Min., ruft
   `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/alerts.yml/dispatches`
-- **Cronjob "Market News Trigger - Morgens"** (7:30 Uhr) und **"... - Abends"** (22:30 Uhr):
+- **Cronjob "Market News Trigger - Morgens"** (8:00 Uhr) und **"... - Abends"** (22:00 Uhr):
   ruft `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/news.yml/dispatches`
   (zwei separate Cronjobs statt einem, da cron-job.org pro Job nur eine feste Uhrzeit erlaubt)
 
