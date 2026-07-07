@@ -1,9 +1,9 @@
 name: Market Alerts
 
 on:
-  schedule:
-    # alle 20 Minuten, 06:00-21:59 UTC (deckt europaeische und US-Handelszeiten ab)
-    - cron: "*/20 6-21 * * *"
+  # Ausloesung erfolgt zuverlaessig extern ueber cron-job.org (siehe README.md).
+  # Kein eigener schedule-Trigger hier, da GitHubs interner Zeitplan unzuverlaessig
+  # ist und sonst zu zufaelligen Doppel-Laeufen fuehren kann.
   workflow_dispatch: {}
 
 permissions:
