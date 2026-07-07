@@ -54,7 +54,11 @@ def save_state(state: dict) -> None:
 
 def collect_new_headlines() -> dict:
     """Liefert {kategorie: [neue headlines]} - nur Links, die noch nicht in vorherigen
-    Laeufen gesehen wurden (verhindert doppelte Meldungen)."""
+    Laeufen gesehen wurden (verhindert doppelte Meldungen).
+    Speichert den Seen-Status NICHT selbst - das passiert erst in main(), nachdem
+    die Headlines erfolgreich verarbeitet (Gemini-Check + ggf. Versand) wurden.
+    So werden Headlines bei einem Fehler (z.B. Gemini-Quota) beim naechsten Lauf
+    erneut versucht, statt fälschlich als 'erledigt' markiert zu werden."""
     state = load_state()
     seen = set(state["seen_links"])
     by_category = {}
@@ -65,14 +69,20 @@ def collect_new_headlines() -> dict:
             print(f"[WARN] Konnte News fuer '{category}' nicht abrufen: {exc}", file=sys.stderr)
             continue
         fresh = [h for h in headlines if h["link"] not in seen]
-        for h in fresh:
-            seen.add(h["link"])
         if fresh:
             by_category[category] = fresh
 
+    return by_category
+
+
+def mark_as_seen(by_category: dict) -> None:
+    state = load_state()
+    seen = set(state["seen_links"])
+    for items in by_category.values():
+        for item in items:
+            seen.add(item["link"])
     state["seen_links"] = list(seen)
     save_state(state)
-    return by_category
 
 
 def ask_gemini_for_relevance(by_category: dict) -> str:
@@ -136,8 +146,11 @@ def main() -> None:
     try:
         summary = ask_gemini_for_relevance(by_category)
     except Exception as exc:
-        print(f"[WARN] Gemini-Relevanz-Check fehlgeschlagen: {exc}", file=sys.stderr)
+        print(f"[WARN] Gemini-Relevanz-Check fehlgeschlagen, versuche es beim naechsten Lauf erneut: {exc}", file=sys.stderr)
         return
+
+    # Erst jetzt, nach erfolgreichem Gemini-Check, als 'gesehen' markieren.
+    mark_as_seen(by_category)
 
     if not summary:
         print("[NEWS] Nichts davon als marktrelevant eingestuft.")
