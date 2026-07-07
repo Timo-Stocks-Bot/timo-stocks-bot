@@ -106,7 +106,8 @@ def ask_gemini_for_relevance(by_category: dict) -> str:
         json={"contents": [{"parts": [{"text": prompt}]}]},
         timeout=30,
     )
-    resp.raise_for_status()
+    if not resp.ok:
+        raise RuntimeError(f"Gemini API {resp.status_code}: {resp.text[:500]}")
     data = resp.json()
     text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
     if "KEINE_RELEVANTEN_NEWS" in text:
