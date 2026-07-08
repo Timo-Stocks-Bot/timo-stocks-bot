@@ -1,9 +1,6 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "alerted": {
-    "SMHN.DE": true,
-    "NBIS": true,
-    "COHR": true,
-    "REKR": true
+    "NBIS": true
   }
 }
