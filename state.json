@@ -2,6 +2,9 @@
   "date": "2026-07-09",
   "alerted": {
     "NBIS": true,
-    "SMHN.DE": true
+    "SMHN.DE": true,
+    "LITE": true,
+    "COHR": true,
+    "META": true
   }
 }
