@@ -1,9 +1,6 @@
 {
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "alerted": {
-    "SMHN.DE": true,
-    "LITE": true,
-    "META": true,
-    "REKR": true
+    "META": true
   }
 }
