@@ -1,10 +1,7 @@
 {
-  "date": "2026-07-13",
+  "date": "2026-07-14",
   "alerted": {
-    "META": true,
-    "REKR": true,
-    "NBIS": true,
     "COHR": true,
-    "LITE": true
+    "REKR": true
   }
 }
