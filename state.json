@@ -2,6 +2,7 @@
   "date": "2026-07-15",
   "alerted": {
     "NBIS": true,
-    "LITE": true
+    "LITE": true,
+    "REKR": true
   }
 }
