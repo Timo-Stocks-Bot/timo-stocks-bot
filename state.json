@@ -3,6 +3,8 @@
   "alerted": {
     "NBIS": true,
     "LITE": true,
-    "REKR": true
+    "REKR": true,
+    "SMHN.DE": true,
+    "COHR": true
   }
 }
