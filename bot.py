@@ -4,16 +4,13 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime
 from pathlib import Path
 from typing import Optional
-from zoneinfo import ZoneInfo
 
 import requests
 import yfinance as yf
 
 STATE_FILE = Path(__file__).parent / "state.json"
-TIMEZONE = ZoneInfo("Europe/Berlin")
 
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
@@ -99,14 +96,11 @@ def format_price(value: float, currency: str, eur_per_usd: Optional[float]) -> s
 
 
 def load_state() -> dict:
-    today = datetime.now(TIMEZONE).date().isoformat()
     if STATE_FILE.exists():
         state = json.loads(STATE_FILE.read_text())
     else:
         state = {}
-    if state.get("date") != today:
-        state = {"date": today, "alerted": {}}
-    state.setdefault("alerted", {})
+    state.setdefault("tickers", {})
     return state
 
 
@@ -126,7 +120,15 @@ def run_alerts() -> None:
             print(f"[WARN] Konnte {ticker} nicht abrufen: {exc}", file=sys.stderr)
             continue
 
-        already_alerted = state["alerted"].get(ticker, False)
+        # Alerted-Status ist an den prev_close gebunden, nicht an das Kalenderdatum:
+        # aendert sich prev_close nicht (Markt noch geschlossen, z.B. kurz nach Mitternacht
+        # oder am Wochenende bei Aktien), bleibt der Status bestehen und es wird nicht erneut
+        # fuer dieselbe, unveraenderte Bewegung gemeldet.
+        ticker_state = state["tickers"].get(ticker, {})
+        if ticker_state.get("prev_close") != prev_close:
+            ticker_state = {"prev_close": prev_close, "alerted": False}
+
+        already_alerted = ticker_state["alerted"]
         if abs(pct_change) >= threshold and not already_alerted:
             direction = "\U0001F7E2" if pct_change > 0 else "\U0001F534"
             price_str = format_price(current, currency, eur_per_usd)
@@ -136,13 +138,15 @@ def run_alerts() -> None:
                 f"Tagesveraenderung: {pct_change:+.2f}% (Schwelle: {threshold}%)"
             )
             send_telegram(text)
-            state["alerted"][ticker] = True
+            ticker_state["alerted"] = True
             print(f"[ALERT] {name}: {pct_change:+.2f}%")
         else:
             print(
                 f"[OK] {name}: {pct_change:+.2f}% "
                 f"(Schwelle {threshold}%, bereits gemeldet: {already_alerted})"
             )
+
+        state["tickers"][ticker] = ticker_state
 
     save_state(state)
 
