@@ -34,6 +34,12 @@ Alle Cronjobs senden dabei einen GitHub **Fine-grained Personal Access Token**
 **Falls Alerts/Gold-Update ausbleiben**: zuerst bei cron-job.org pruefen, ob die Cronjobs
 aktiv sind und ob der letzte Lauf erfolgreich war (Token evtl. abgelaufen/widerrufen).
 
+**Falls News-Update laenger ausbleibt, obwohl die GitHub-Actions-Laeufe "success" zeigen**:
+`GROQ_API_KEY` kann abgelaufen sein (Groq-Keys hatten schon mal ein Ablaufdatum, das man beim
+Erstellen explizit auf "No expiration" stellen sollte). Symptom im Actions-Log: `[WARN]
+Groq-Relevanz-Check fehlgeschlagen ... expired_api_key`. Fix: neuen Key bei console.groq.com
+(nicht console.grok.com!) erstellen, `GROQ_API_KEY`-Secret in GitHub aktualisieren.
+
 ## Secrets (GitHub Repo Settings -> Secrets and variables -> Actions)
 
 - `TELEGRAM_BOT_TOKEN`
