@@ -59,18 +59,27 @@ def send_telegram(text: str) -> None:
 
 
 def get_price_change(ticker: str) -> tuple[float, float, float]:
-    """Liefert (aktueller_kurs, vortagesschluss, veraenderung_in_prozent)."""
+    """Liefert (aktueller_kurs, vortagesschluss, veraenderung_in_prozent).
+
+    Nutzt bevorzugt Ticker.get_info() (regularMarketPrice/regularMarketPreviousClose) statt
+    fast_info: fast_info.previous_close lieferte bei manchen Tickern (z.B. TSLA) einen falschen,
+    veralteten Wert und produzierte dadurch False-Positive-Alerts."""
     t = yf.Ticker(ticker)
     try:
-        fast = t.fast_info
-        current = float(fast["last_price"])
-        prev_close = float(fast["previous_close"])
+        info = t.get_info()
+        current = float(info["regularMarketPrice"])
+        prev_close = float(info["regularMarketPreviousClose"])
     except Exception:
-        hist = t.history(period="5d", interval="1d")
-        if len(hist) < 2:
-            raise RuntimeError(f"Nicht genug Kursdaten fuer {ticker}")
-        current = float(hist["Close"].iloc[-1])
-        prev_close = float(hist["Close"].iloc[-2])
+        try:
+            fast = t.fast_info
+            current = float(fast["last_price"])
+            prev_close = float(fast["previous_close"])
+        except Exception:
+            hist = t.history(period="5d", interval="1d")
+            if len(hist) < 2:
+                raise RuntimeError(f"Nicht genug Kursdaten fuer {ticker}")
+            current = float(hist["Close"].iloc[-1])
+            prev_close = float(hist["Close"].iloc[-2])
     pct_change = (current - prev_close) / prev_close * 100
     return current, prev_close, pct_change
 
