@@ -1,39 +1,39 @@
 {
   "tickers": {
     "GC=F": {
-      "prev_close": 4127.60009765625,
+      "prev_close": 4151.9,
       "alerted": false
     },
     "BTC-USD": {
-      "prev_close": 66086.609375,
+      "prev_close": 66081.05,
       "alerted": false
     },
     "SOL-USD": {
-      "prev_close": 77.94999694824219,
+      "prev_close": 77.90397,
       "alerted": false
     },
     "NVDA": {
-      "prev_close": 212.04,
+      "prev_close": 207.29,
       "alerted": false
     },
     "SMHN.DE": {
-      "prev_close": 84.30000305175781,
+      "prev_close": 84.15,
       "alerted": false
     },
     "NBIS": {
-      "prev_close": 226.5,
+      "prev_close": 216.92,
       "alerted": false
     },
     "LITE": {
-      "prev_close": 847.45,
+      "prev_close": 837.56,
       "alerted": false
     },
     "COHR": {
-      "prev_close": 316.21,
+      "prev_close": 317.22,
       "alerted": false
     },
     "REKR": {
-      "prev_close": 0.6243,
+      "prev_close": 0.6253,
       "alerted": false
     },
     "^GSPC": {
@@ -45,32 +45,32 @@
       "alerted": false
     },
     "^GDAXI": {
-      "prev_close": 25171.7109375,
+      "prev_close": 25155.41,
       "alerted": false
     },
     "AAPL": {
-      "prev_close": 325.74,
+      "prev_close": 327.74,
       "alerted": false
     },
     "MSFT": {
-      "prev_close": 388.3,
+      "prev_close": 397.75,
       "alerted": false
     },
     "GOOGL": {
-      "prev_close": 330.7499,
+      "prev_close": 347.15,
       "alerted": false
     },
     "AMZN": {
-      "prev_close": 241.962,
+      "prev_close": 247.55,
       "alerted": false
     },
     "META": {
-      "prev_close": 619.6544,
+      "prev_close": 643.81,
       "alerted": false
     },
     "TSLA": {
-      "prev_close": 358.8,
-      "alerted": true
+      "prev_close": 378.93,
+      "alerted": false
     }
   }
 }
