@@ -1,7 +1,7 @@
 {
   "tickers": {
     "GC=F": {
-      "prev_close": 4151.9,
+      "prev_close": 4050.2,
       "alerted": false
     },
     "BTC-USD": {
@@ -33,7 +33,7 @@
       "alerted": false
     },
     "REKR": {
-      "prev_close": 0.6151,
+      "prev_close": 0.61509997,
       "alerted": false
     },
     "^GSPC": {
