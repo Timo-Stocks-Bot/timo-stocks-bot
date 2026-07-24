@@ -17,8 +17,8 @@
       "alerted": false
     },
     "SMHN.DE": {
-      "prev_close": 84.15,
-      "alerted": true
+      "prev_close": 79.8,
+      "alerted": false
     },
     "NBIS": {
       "prev_close": 218.16,
@@ -33,7 +33,7 @@
       "alerted": false
     },
     "REKR": {
-      "prev_close": 0.6151,
+      "prev_close": 0.61509997,
       "alerted": false
     },
     "^GSPC": {
