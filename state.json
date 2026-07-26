@@ -41,11 +41,11 @@
       "alerted": false
     },
     "^IXIC": {
-      "prev_close": 25137.693,
+      "prev_close": 25137.7,
       "alerted": false
     },
     "^GDAXI": {
-      "prev_close": 24763.12,
+      "prev_close": 24763.1,
       "alerted": false
     },
     "AAPL": {
@@ -53,7 +53,7 @@
       "alerted": false
     },
     "MSFT": {
-      "prev_close": 381.58,
+      "prev_close": 381.58002,
       "alerted": false
     },
     "GOOGL": {
