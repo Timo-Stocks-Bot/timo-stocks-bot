@@ -26,15 +26,15 @@
     },
     "LITE": {
       "prev_close": 762.99,
-      "alerted": false
+      "alerted": true
     },
     "COHR": {
-      "prev_close": 282.57,
+      "prev_close": 282.39,
       "alerted": false
     },
     "REKR": {
       "prev_close": 0.6088,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7411.98,
