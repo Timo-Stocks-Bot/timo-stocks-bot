@@ -1,76 +1,76 @@
 {
   "tickers": {
     "GC=F": {
-      "prev_close": 4127.60009765625,
+      "prev_close": 4098.6,
       "alerted": false
     },
     "BTC-USD": {
-      "prev_close": 66086.609375,
+      "prev_close": 63853.49,
       "alerted": false
     },
     "SOL-USD": {
-      "prev_close": 77.94999694824219,
+      "prev_close": 73.700195,
       "alerted": false
     },
     "NVDA": {
-      "prev_close": 212.04,
+      "prev_close": 196.51,
       "alerted": false
     },
     "SMHN.DE": {
-      "prev_close": 84.30000305175781,
+      "prev_close": 69.8,
       "alerted": false
     },
     "NBIS": {
-      "prev_close": 226.5,
-      "alerted": false
+      "prev_close": 187.88,
+      "alerted": true
     },
     "LITE": {
-      "prev_close": 847.45,
-      "alerted": false
+      "prev_close": 711.96,
+      "alerted": true
     },
     "COHR": {
-      "prev_close": 316.21,
-      "alerted": false
+      "prev_close": 271.31,
+      "alerted": true
     },
     "REKR": {
-      "prev_close": 0.6243,
+      "prev_close": 0.6248,
       "alerted": false
     },
     "^GSPC": {
-      "prev_close": 7509.2,
+      "prev_close": 7413.18,
       "alerted": false
     },
     "^IXIC": {
-      "prev_close": 25837.207,
+      "prev_close": 24932.082,
       "alerted": false
     },
     "^GDAXI": {
-      "prev_close": 25171.7109375,
+      "prev_close": 25464.01,
       "alerted": false
     },
     "AAPL": {
-      "prev_close": 325.74,
+      "prev_close": 336.91,
       "alerted": false
     },
     "MSFT": {
-      "prev_close": 388.3,
+      "prev_close": 389.1,
       "alerted": false
     },
     "GOOGL": {
-      "prev_close": 330.7499,
+      "prev_close": 326.56,
       "alerted": false
     },
     "AMZN": {
-      "prev_close": 241.962,
+      "prev_close": 231.39,
       "alerted": false
     },
     "META": {
-      "prev_close": 619.6544,
+      "prev_close": 593.87,
       "alerted": false
     },
     "TSLA": {
-      "prev_close": 358.8,
-      "alerted": true
+      "prev_close": 309.22,
+      "alerted": false
     }
   }
 }
