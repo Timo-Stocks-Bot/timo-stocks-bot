@@ -31,6 +31,8 @@ WATCHLIST = [
     {"name": "Lumentum Holdings", "ticker": "LITE", "threshold": 5.0, "currency": "USD"},
     {"name": "Coherent Corp", "ticker": "COHR", "threshold": 5.0, "currency": "USD"},
     {"name": "Rekor Systems", "ticker": "REKR", "threshold": 5.0, "currency": "USD"},
+    {"name": "Strabag SE", "ticker": "STR.VI", "threshold": 5.0, "currency": "EUR"},
+    {"name": "Allianz SE", "ticker": "ALV.DE", "threshold": 5.0, "currency": "EUR"},
     {"name": "S&P 500", "ticker": "^GSPC", "threshold": 3.0, "currency": "INDEX"},
     {"name": "Nasdaq Composite", "ticker": "^IXIC", "threshold": 3.0, "currency": "INDEX"},
     {"name": "DAX", "ticker": "^GDAXI", "threshold": 3.0, "currency": "INDEX"},

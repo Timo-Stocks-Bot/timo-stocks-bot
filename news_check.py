@@ -23,6 +23,9 @@ NEWS_CATEGORIES = {
     "Edelmetalle": "Fed Zinsentscheidung OR Goldpreis Zentralbank OR Inflation Gold",
     "Krypto": "Bitcoin SEC Regulierung OR Krypto ETF Zufluss OR Krypto Boerse Hack",
     "Tech/KI": "Chip Exportverbot OR KI Kartellrecht OR Nvidia Quartalszahlen Guidance",
+    "US-Aktienmarkt/S&P 500": "Fed Zinsentscheidung S&P 500 OR US Arbeitsmarktbericht OR "
+                               "US Inflation Verbraucherpreise OR Handelskrieg Zoelle USA OR "
+                               "US Rezession Konjunktur",
 }
 
 SEEN_LIMIT = 500  # max. Anzahl gemerkter Links, aeltere werden verworfen
