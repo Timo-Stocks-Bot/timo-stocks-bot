@@ -71,6 +71,14 @@
     "TSLA": {
       "prev_close": 309.22,
       "alerted": false
+    },
+    "STR.VI": {
+      "prev_close": 82.4,
+      "alerted": false
+    },
+    "ALV.DE": {
+      "prev_close": 432.4,
+      "alerted": false
     }
   }
 }
