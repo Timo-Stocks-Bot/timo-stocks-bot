@@ -12,6 +12,12 @@ Hinweis: urspruenglich war hierfuer Google Gemini vorgesehen, dessen Free-Tier i
 der EU/EWR nicht verfuegbar (Quota 0). Deshalb wird stattdessen Groq genutzt (echter
 kostenloser Tier, kein EU-Ausschluss bekannt).
 
+Zusaetzlich screent `movers_screener.py` taeglich alle 503 S&P-500-Werte (Liste in
+`sp500_tickers.py`) auf aussergewoehnliche Tagesstuerze (<= -10%, deutlich mehr als die
+normalen Watchlist-Schwellen). Bei einem Treffer werden per RSS Schlagzeilen zur Aktie gesucht
+und per Groq zusammengefasst, was laut News der wahrscheinliche Ausloeser war - **ohne**
+Kauf-/Verkaufsempfehlung, nur Fakten. Bleibt still, wenn nichts gefunden wird.
+
 ## Wichtig: Automatisierung laeuft ueber cron-job.org, nicht ueber GitHubs eigenen Zeitplan
 
 GitHubs eingebauter `schedule:`-Trigger in den Workflows (`.github/workflows/*.yml`) hat sich
@@ -26,6 +32,8 @@ stattdessen ueber einen externen, kostenlosen Cron-Dienst ausgeloest:
 - **Cronjob "Market News Trigger - Morgens"** (8:00 Uhr) und **"... - Abends"** (22:00 Uhr):
   ruft `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/news.yml/dispatches`
   (zwei separate Cronjobs statt einem, da cron-job.org pro Job nur eine feste Uhrzeit erlaubt)
+- **Cronjob "Extreme Movers Screener"**: 1x taeglich, nach US-Boersenschluss (z.B. 22:15 Uhr),
+  ruft `POST https://api.github.com/repos/Timo-Stocks-Bot/timo-stocks-bot/actions/workflows/movers.yml/dispatches`
 
 Alle Cronjobs senden dabei einen GitHub **Fine-grained Personal Access Token**
 (Scope: nur dieses Repo, Permission "Actions: Read and write") als
@@ -59,3 +67,7 @@ Pre-Market-Bewegungen schon einpreisen. Ist so gewollt (vermeidet False-Positive
 
 - Watchlist/Schwellenwerte: `WATCHLIST`-Liste in `bot.py` aendern, committen, pushen.
 - News-Kategorien/Suchbegriffe: `NEWS_CATEGORIES`-Dict in `news_check.py` aendern.
+- Ausreisser-Schwelle: `EXTREME_DROP_THRESHOLD` in `movers_screener.py` aendern.
+- S&P-500-Liste: `sp500_tickers.py`, generiert aus
+  github.com/datasets/s-and-p-500-companies - bei Bedarf neu generieren, falls sich der
+  Index aendert (aendert sich selten, kein automatischer Sync eingebaut).
