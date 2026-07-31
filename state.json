@@ -58,7 +58,7 @@
     },
     "GOOGL": {
       "prev_close": 333.66,
-      "alerted": false
+      "alerted": true
     },
     "AMZN": {
       "prev_close": 235.5,
