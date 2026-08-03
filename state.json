@@ -30,7 +30,7 @@
     },
     "COHR": {
       "prev_close": 262.89,
-      "alerted": false
+      "alerted": true
     },
     "REKR": {
       "prev_close": 0.6238,
