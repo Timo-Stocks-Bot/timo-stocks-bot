@@ -29,12 +29,12 @@
       "alerted": false
     },
     "COHR": {
-      "prev_close": 355.855,
+      "prev_close": 355.64,
       "alerted": false
     },
     "REKR": {
       "prev_close": 0.683,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7748.5,
