@@ -25,7 +25,7 @@
       "alerted": true
     },
     "LITE": {
-      "prev_close": 880.41,
+      "prev_close": 880.41003,
       "alerted": true
     },
     "COHR": {
@@ -41,15 +41,15 @@
       "alerted": false
     },
     "^IXIC": {
-      "prev_close": 26803.025,
+      "prev_close": 26803.0,
       "alerted": false
     },
     "^GDAXI": {
-      "prev_close": 26299.74,
+      "prev_close": 26299.7,
       "alerted": false
     },
     "AAPL": {
-      "prev_close": 305.26,
+      "prev_close": 305.25998,
       "alerted": false
     },
     "MSFT": {
