@@ -70,7 +70,7 @@
     },
     "TSLA": {
       "prev_close": 336.87,
-      "alerted": false
+      "alerted": true
     },
     "STR.VI": {
       "prev_close": 84.0,
