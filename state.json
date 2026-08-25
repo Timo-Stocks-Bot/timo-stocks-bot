@@ -13,7 +13,7 @@
       "alerted": false
     },
     "NVDA": {
-      "prev_close": 214.72,
+      "prev_close": 208.48,
       "alerted": false
     },
     "SMHN.DE": {
@@ -21,27 +21,27 @@
       "alerted": false
     },
     "NBIS": {
-      "prev_close": 219.13,
-      "alerted": true
+      "prev_close": 210.91,
+      "alerted": false
     },
     "LITE": {
-      "prev_close": 866.71,
-      "alerted": true
+      "prev_close": 830.17,
+      "alerted": false
     },
     "COHR": {
-      "prev_close": 289.52,
-      "alerted": true
+      "prev_close": 275.47,
+      "alerted": false
     },
     "REKR": {
-      "prev_close": 0.6077,
+      "prev_close": 0.5834,
       "alerted": false
     },
     "^GSPC": {
-      "prev_close": 7674.37,
+      "prev_close": 7652.86,
       "alerted": false
     },
     "^IXIC": {
-      "prev_close": 26180.5,
+      "prev_close": 25980.191,
       "alerted": false
     },
     "^GDAXI": {
@@ -49,27 +49,27 @@
       "alerted": false
     },
     "AAPL": {
-      "prev_close": 309.35,
+      "prev_close": 310.34,
       "alerted": false
     },
     "MSFT": {
-      "prev_close": 483.24,
+      "prev_close": 487.31,
       "alerted": false
     },
     "GOOGL": {
-      "prev_close": 344.82,
+      "prev_close": 348.06,
       "alerted": false
     },
     "AMZN": {
-      "prev_close": 258.63,
+      "prev_close": 262.07,
       "alerted": false
     },
     "META": {
-      "prev_close": 549.9,
+      "prev_close": 559.02,
       "alerted": false
     },
     "TSLA": {
-      "prev_close": 362.86,
+      "prev_close": 348.95,
       "alerted": false
     },
     "STR.VI": {
