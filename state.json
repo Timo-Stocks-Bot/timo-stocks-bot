@@ -62,7 +62,7 @@
     },
     "AMZN": {
       "prev_close": 256.26,
-      "alerted": false
+      "alerted": true
     },
     "META": {
       "prev_close": 571.1,
