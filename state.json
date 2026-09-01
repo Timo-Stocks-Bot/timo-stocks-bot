@@ -26,10 +26,10 @@
     },
     "LITE": {
       "prev_close": 914.76,
-      "alerted": false
+      "alerted": true
     },
     "COHR": {
-      "prev_close": 277.78,
+      "prev_close": 277.83,
       "alerted": false
     },
     "REKR": {
