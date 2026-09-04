@@ -29,8 +29,8 @@
       "alerted": false
     },
     "COHR": {
-      "prev_close": 264.4,
-      "alerted": false
+      "prev_close": 264.41,
+      "alerted": true
     },
     "REKR": {
       "prev_close": 0.5196,
@@ -70,7 +70,7 @@
     },
     "TSLA": {
       "prev_close": 376.365,
-      "alerted": false
+      "alerted": true
     },
     "STR.VI": {
       "prev_close": 94.5,
