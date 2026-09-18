@@ -6,7 +6,7 @@
     },
     "BTC-USD": {
       "prev_close": 76350.68,
-      "alerted": false
+      "alerted": true
     },
     "SOL-USD": {
       "prev_close": 101.587395,
