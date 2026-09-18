@@ -10,7 +10,7 @@
     },
     "SOL-USD": {
       "prev_close": 101.587395,
-      "alerted": false
+      "alerted": true
     },
     "NVDA": {
       "prev_close": 219.34,
