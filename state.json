@@ -5,12 +5,12 @@
       "alerted": false
     },
     "BTC-USD": {
-      "prev_close": 76350.68,
-      "alerted": true
+      "prev_close": 80877.27,
+      "alerted": false
     },
     "SOL-USD": {
-      "prev_close": 101.587395,
-      "alerted": true
+      "prev_close": 112.610954,
+      "alerted": false
     },
     "NVDA": {
       "prev_close": 219.34,
