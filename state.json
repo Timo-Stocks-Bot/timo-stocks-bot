@@ -26,10 +26,10 @@
     },
     "LITE": {
       "prev_close": 930.91,
-      "alerted": false
+      "alerted": true
     },
     "COHR": {
-      "prev_close": 317.25,
+      "prev_close": 317.36,
       "alerted": false
     },
     "REKR": {
@@ -66,7 +66,7 @@
     },
     "META": {
       "prev_close": 665.225,
-      "alerted": false
+      "alerted": true
     },
     "TSLA": {
       "prev_close": 364.27,
