@@ -54,7 +54,7 @@
     },
     "MSFT": {
       "prev_close": 497.93,
-      "alerted": false
+      "alerted": true
     },
     "GOOGL": {
       "prev_close": 342.36,
