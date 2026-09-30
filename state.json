@@ -17,8 +17,8 @@
       "alerted": false
     },
     "SMHN.DE": {
-      "prev_close": 67.55,
-      "alerted": true
+      "prev_close": 71.2,
+      "alerted": false
     },
     "NBIS": {
       "prev_close": 231.88,
@@ -45,7 +45,7 @@
       "alerted": false
     },
     "^GDAXI": {
-      "prev_close": 25374.4,
+      "prev_close": 25399.21,
       "alerted": false
     },
     "AAPL": {
@@ -73,11 +73,11 @@
       "alerted": false
     },
     "STR.VI": {
-      "prev_close": 106.2,
+      "prev_close": 105.2,
       "alerted": false
     },
     "ALV.DE": {
-      "prev_close": 425.5,
+      "prev_close": 422.8,
       "alerted": false
     }
   }
