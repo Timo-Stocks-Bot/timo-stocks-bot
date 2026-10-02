@@ -18,7 +18,7 @@
     },
     "SMHN.DE": {
       "prev_close": 73.6,
-      "alerted": false
+      "alerted": true
     },
     "NBIS": {
       "prev_close": 232.28,
@@ -29,7 +29,7 @@
       "alerted": false
     },
     "COHR": {
-      "prev_close": 319.31,
+      "prev_close": 319.19,
       "alerted": false
     },
     "REKR": {
@@ -70,7 +70,7 @@
     },
     "TSLA": {
       "prev_close": 354.11,
-      "alerted": false
+      "alerted": true
     },
     "STR.VI": {
       "prev_close": 102.6,
