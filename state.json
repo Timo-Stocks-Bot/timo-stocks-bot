@@ -1,39 +1,39 @@
 {
   "tickers": {
     "GC=F": {
-      "prev_close": 4140.7,
+      "prev_close": 4160.39990234375,
       "alerted": false
     },
     "BTC-USD": {
-      "prev_close": 83275.52,
+      "prev_close": 83275.0625,
       "alerted": false
     },
     "SOL-USD": {
-      "prev_close": 116.22389,
+      "prev_close": 116.25,
       "alerted": false
     },
     "NVDA": {
-      "prev_close": 239.24,
+      "prev_close": 237.47,
       "alerted": false
     },
     "SMHN.DE": {
-      "prev_close": 65.5,
+      "prev_close": 65.6500015258789,
       "alerted": false
     },
     "NBIS": {
-      "prev_close": 249.87,
-      "alerted": true
+      "prev_close": 237.15,
+      "alerted": false
     },
     "LITE": {
-      "prev_close": 1133.4,
+      "prev_close": 1111.07,
       "alerted": false
     },
     "COHR": {
-      "prev_close": 338.36,
+      "prev_close": 334.4614,
       "alerted": false
     },
     "REKR": {
-      "prev_close": 0.324,
+      "prev_close": 0.3358,
       "alerted": false
     },
     "^GSPC": {
@@ -45,39 +45,39 @@
       "alerted": false
     },
     "^GDAXI": {
-      "prev_close": 25104.36,
+      "prev_close": 25089.08984375,
       "alerted": false
     },
     "AAPL": {
-      "prev_close": 333.63,
+      "prev_close": 336.67,
       "alerted": false
     },
     "MSFT": {
-      "prev_close": 529.3,
+      "prev_close": 529.76,
       "alerted": false
     },
     "GOOGL": {
-      "prev_close": 347.68,
+      "prev_close": 350.5,
       "alerted": false
     },
     "AMZN": {
-      "prev_close": 256.29,
+      "prev_close": 259.92,
       "alerted": false
     },
     "META": {
-      "prev_close": 738.88,
+      "prev_close": 721.31,
       "alerted": false
     },
     "TSLA": {
-      "prev_close": 380.68,
+      "prev_close": 377.81,
       "alerted": false
     },
     "STR.VI": {
-      "prev_close": 102.2,
+      "prev_close": 101.5999984741211,
       "alerted": false
     },
     "ALV.DE": {
-      "prev_close": 417.3,
+      "prev_close": 416.5,
       "alerted": false
     }
   }
