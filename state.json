@@ -34,7 +34,7 @@
     },
     "REKR": {
       "prev_close": 0.3572,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7805.45,
