@@ -26,7 +26,7 @@
     },
     "LITE": {
       "prev_close": 869.54,
-      "alerted": false
+      "alerted": true
     },
     "COHR": {
       "prev_close": 250.6,
@@ -34,7 +34,7 @@
     },
     "REKR": {
       "prev_close": 0.3531,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7744.06,
