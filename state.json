@@ -34,7 +34,7 @@
     },
     "REKR": {
       "prev_close": 0.3309,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7659.44,
@@ -70,7 +70,7 @@
     },
     "TSLA": {
       "prev_close": 354.72,
-      "alerted": false
+      "alerted": true
     },
     "STR.VI": {
       "prev_close": 101.4,
