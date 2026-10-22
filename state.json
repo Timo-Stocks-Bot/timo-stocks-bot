@@ -22,7 +22,7 @@
     },
     "NBIS": {
       "prev_close": 171.57,
-      "alerted": false
+      "alerted": true
     },
     "LITE": {
       "prev_close": 850.7,
@@ -62,7 +62,7 @@
     },
     "AMZN": {
       "prev_close": 262.37,
-      "alerted": false
+      "alerted": true
     },
     "META": {
       "prev_close": 697.52,
