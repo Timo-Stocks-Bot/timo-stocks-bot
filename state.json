@@ -1,32 +1,32 @@
 {
   "tickers": {
     "GC=F": {
-      "prev_close": 4038.4,
+      "prev_close": 4029.89990234375,
       "alerted": false
     },
     "BTC-USD": {
-      "prev_close": 80009.5,
+      "prev_close": 80008.7890625,
       "alerted": false
     },
     "SOL-USD": {
-      "prev_close": 100.75622,
+      "prev_close": 100.76000213623047,
       "alerted": false
     },
     "NVDA": {
-      "prev_close": 216.0,
+      "prev_close": 216.5,
       "alerted": false
     },
     "SMHN.DE": {
-      "prev_close": 52.35,
-      "alerted": true
+      "prev_close": 52.29999923706055,
+      "alerted": false
     },
     "NBIS": {
-      "prev_close": 153.27,
+      "prev_close": 155.85,
       "alerted": true
     },
     "LITE": {
-      "prev_close": 818.1,
-      "alerted": true
+      "prev_close": 838.4668,
+      "alerted": false
     },
     "COHR": {
       "prev_close": 221.5,
