@@ -45,7 +45,7 @@
       "alerted": false
     },
     "^GDAXI": {
-      "prev_close": 25590.8,
+      "prev_close": 25704.02,
       "alerted": false
     },
     "AAPL": {
@@ -73,11 +73,11 @@
       "alerted": false
     },
     "STR.VI": {
-      "prev_close": 101.6,
+      "prev_close": 100.6,
       "alerted": false
     },
     "ALV.DE": {
-      "prev_close": 434.8,
+      "prev_close": 435.3,
       "alerted": false
     }
   }
