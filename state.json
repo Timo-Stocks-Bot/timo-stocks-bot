@@ -22,19 +22,19 @@
     },
     "NBIS": {
       "prev_close": 182.34,
-      "alerted": false
+      "alerted": true
     },
     "LITE": {
       "prev_close": 913.95,
       "alerted": false
     },
     "COHR": {
-      "prev_close": 239.625,
+      "prev_close": 239.59,
       "alerted": false
     },
     "REKR": {
       "prev_close": 0.3355,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7743.98,
