@@ -42,7 +42,7 @@
     },
     "^IXIC": {
       "prev_close": 26184.725,
-      "alerted": false
+      "alerted": true
     },
     "^GDAXI": {
       "prev_close": 26039.68,
