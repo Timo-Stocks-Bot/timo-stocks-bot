@@ -34,7 +34,7 @@
     },
     "REKR": {
       "prev_close": 0.3978,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7580.07,
@@ -62,7 +62,7 @@
     },
     "AMZN": {
       "prev_close": 240.35,
-      "alerted": false
+      "alerted": true
     },
     "META": {
       "prev_close": 614.99,
