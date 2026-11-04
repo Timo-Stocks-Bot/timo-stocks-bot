@@ -29,7 +29,7 @@
       "alerted": true
     },
     "COHR": {
-      "prev_close": 207.26,
+      "prev_close": 207.49,
       "alerted": false
     },
     "REKR": {
@@ -50,7 +50,7 @@
     },
     "AAPL": {
       "prev_close": 331.9,
-      "alerted": false
+      "alerted": true
     },
     "MSFT": {
       "prev_close": 520.99,
@@ -58,7 +58,7 @@
     },
     "GOOGL": {
       "prev_close": 280.03,
-      "alerted": false
+      "alerted": true
     },
     "AMZN": {
       "prev_close": 250.69,
