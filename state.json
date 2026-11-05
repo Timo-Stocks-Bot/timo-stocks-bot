@@ -38,7 +38,7 @@
     },
     "^GSPC": {
       "prev_close": 7688.62,
-      "alerted": false
+      "alerted": true
     },
     "^IXIC": {
       "prev_close": 25736.514,
@@ -62,7 +62,7 @@
     },
     "AMZN": {
       "prev_close": 266.03,
-      "alerted": false
+      "alerted": true
     },
     "META": {
       "prev_close": 630.0,
