@@ -14,11 +14,11 @@
     },
     "NVDA": {
       "prev_close": 200.13,
-      "alerted": false
+      "alerted": true
     },
     "SMHN.DE": {
       "prev_close": 49.32,
-      "alerted": false
+      "alerted": true
     },
     "NBIS": {
       "prev_close": 141.52,
@@ -29,12 +29,12 @@
       "alerted": true
     },
     "COHR": {
-      "prev_close": 195.18,
-      "alerted": false
+      "prev_close": 195.09,
+      "alerted": true
     },
     "REKR": {
       "prev_close": 0.3584,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7688.62,
@@ -42,7 +42,7 @@
     },
     "^IXIC": {
       "prev_close": 25736.514,
-      "alerted": false
+      "alerted": true
     },
     "^GDAXI": {
       "prev_close": 26437.67,
@@ -70,7 +70,7 @@
     },
     "TSLA": {
       "prev_close": 385.19,
-      "alerted": false
+      "alerted": true
     },
     "STR.VI": {
       "prev_close": 102.8,
