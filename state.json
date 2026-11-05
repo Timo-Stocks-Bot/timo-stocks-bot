@@ -1,12 +1,12 @@
 {
   "tickers": {
     "GC=F": {
-      "prev_close": 4073.0,
+      "prev_close": 4113.5,
       "alerted": false
     },
     "BTC-USD": {
       "prev_close": 80428.305,
-      "alerted": false
+      "alerted": true
     },
     "SOL-USD": {
       "prev_close": 95.493225,
