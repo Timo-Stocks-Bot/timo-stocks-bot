@@ -14,7 +14,7 @@
     },
     "NVDA": {
       "prev_close": 181.6,
-      "alerted": false
+      "alerted": true
     },
     "SMHN.DE": {
       "prev_close": 44.4,
@@ -29,7 +29,7 @@
       "alerted": true
     },
     "COHR": {
-      "prev_close": 169.65,
+      "prev_close": 169.76,
       "alerted": true
     },
     "REKR": {
