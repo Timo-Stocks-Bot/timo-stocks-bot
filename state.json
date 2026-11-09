@@ -42,10 +42,10 @@
     },
     "^IXIC": {
       "prev_close": 24579.424,
-      "alerted": false
+      "alerted": true
     },
     "^GDAXI": {
-      "prev_close": 25820.36,
+      "prev_close": 25820.4,
       "alerted": false
     },
     "AAPL": {
