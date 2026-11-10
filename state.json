@@ -14,7 +14,7 @@
     },
     "NVDA": {
       "prev_close": 178.67,
-      "alerted": false
+      "alerted": true
     },
     "SMHN.DE": {
       "prev_close": 45.5,
@@ -34,7 +34,7 @@
     },
     "REKR": {
       "prev_close": 0.3495,
-      "alerted": false
+      "alerted": true
     },
     "^GSPC": {
       "prev_close": 7549.94,
