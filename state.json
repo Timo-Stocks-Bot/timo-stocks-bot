@@ -22,7 +22,7 @@
     },
     "NBIS": {
       "prev_close": 141.45,
-      "alerted": false
+      "alerted": true
     },
     "LITE": {
       "prev_close": 596.16,
@@ -30,7 +30,7 @@
     },
     "COHR": {
       "prev_close": 225.19,
-      "alerted": false
+      "alerted": true
     },
     "REKR": {
       "prev_close": 0.3495,
