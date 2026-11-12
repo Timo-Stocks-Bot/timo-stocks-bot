@@ -29,8 +29,8 @@
       "alerted": true
     },
     "COHR": {
-      "prev_close": 234.56,
-      "alerted": true
+      "prev_close": 234.51,
+      "alerted": false
     },
     "REKR": {
       "prev_close": 0.3262,
