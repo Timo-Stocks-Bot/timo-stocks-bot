@@ -18,7 +18,7 @@
     },
     "SMHN.DE": {
       "prev_close": 50.45,
-      "alerted": false
+      "alerted": true
     },
     "NBIS": {
       "prev_close": 128.64,
