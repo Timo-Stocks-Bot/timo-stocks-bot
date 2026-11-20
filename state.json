@@ -6,7 +6,7 @@
     },
     "BTC-USD": {
       "prev_close": 61904.76,
-      "alerted": false
+      "alerted": true
     },
     "SOL-USD": {
       "prev_close": 73.06757,
@@ -38,7 +38,7 @@
     },
     "^GSPC": {
       "prev_close": 7175.83,
-      "alerted": false
+      "alerted": true
     },
     "^IXIC": {
       "prev_close": 23879.2,
