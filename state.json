@@ -22,7 +22,7 @@
     },
     "NBIS": {
       "prev_close": 84.99,
-      "alerted": false
+      "alerted": true
     },
     "LITE": {
       "prev_close": 476.58,
